@@ -20,6 +20,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define USE_I2C
 #define EE_HANDS
 
+// constant speed for mouse wheel
+#define MK_3_SPEED
+#define MK_W_OFFSET_1 3
+
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 

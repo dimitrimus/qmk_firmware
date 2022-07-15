@@ -11,6 +11,16 @@
 // layout 1 and 2
 #define CD_LEFT  LGUI(KC_LEFT)
 #define CD_RGHT  LGUI(KC_RGHT)
+#define SH_1 LSFT(KC_1)
+#define SH_2 LSFT(KC_2)
+#define SH_3 LSFT(KC_3)
+#define SH_4 LSFT(KC_4)
+#define SH_5 LSFT(KC_5)
+#define SH_6 LSFT(KC_6)
+#define SH_7 LSFT(KC_7)
+#define SH_8 LSFT(KC_8)
+#define SH_9 LSFT(KC_9)
+#define SH_0 LSFT(KC_0)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
@@ -23,7 +33,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_F12,           KC_MPLY, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, SHFT_ENT,
     //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      KC_LGUI, L1_MINS, ALT_SPC,                   KC_SPC,  L2_EQL,  CD_BSLS
+                                      KC_LGUI, L1_MINS, ALT_SPC,                   KC_SPC,  L2_EQL,  KC_BSPC
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     ),
 
@@ -33,11 +43,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
        KC_GRV,  KC_PGUP, CD_LEFT, KC_UP,   CD_RGHT, KC__VOLUP,                        KC__VOLUP, CD_LEFT, KC_UP,   CD_RGHT, KC_PGUP, KC_RBRC,
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_LCTL, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC__VOLDOWN,                    KC__VOLDOWN, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_NO,
+       KC_LCTL, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC__VOLDOWN,                    KC__VOLDOWN, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_BSLS,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_LSFT, KC_NO,   KC_NO,   KC_NO,   KC_LCBR, KC_LBRC, KC_F12,           KC_MPLY, KC_RBRC, KC_RCBR, KC_NO,   KC_NO,   KC_NO,   KC_RSFT,
+       KC_LSFT, SH_1,    SH_2,    SH_3,    SH_4,    SH_5,    KC_F12,           KC_MPLY, SH_6,    SH_7,    SH_8,    SH_9,    SH_0,    KC_RSFT,
     //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      KC_LGUI, KC_NO,   KC_LALT,                   KC_RALT, KC_NO,   KC_NO
+                                      KC_LGUI, KC_NO,   KC_LALT,                   KC_RALT, KC_NO,   KC_DEL
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     ),
 
@@ -47,11 +57,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
        RGB_TOG, KC_PGUP, CD_LEFT, KC_UP,   CD_RGHT, KC__VOLUP,                        KC__VOLUP, CD_LEFT, KC_UP,   CD_RGHT, KC_PGUP, KC_RBRC,
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_LCTL, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC__VOLDOWN,                    KC__VOLDOWN, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_NO,
+       KC_LCTL, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC__VOLDOWN,                    KC__VOLDOWN, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_BSLS,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_LSFT, KC_NO,   KC_NO,   KC_NO,   KC_LCBR, KC_LBRC, KC_F12,           KC_MPLY, KC_RBRC, KC_RCBR, KC_NO,   KC_NO,   KC_NO,   KC_RSFT,
+       KC_LSFT, SH_1,    SH_2,    SH_3,    SH_4,    SH_5,    KC_F12,           KC_MPLY, SH_6,    SH_7,    SH_8,    SH_9,    SH_0,    KC_RSFT,
     //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      KC_LGUI, KC_NO,   KC_LALT,                   KC_RALT, KC_NO,   KC_NO
+                                      KC_LGUI, KC_NO,   KC_LALT,                   KC_RALT, KC_NO,   KC_DEL
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     )
 };

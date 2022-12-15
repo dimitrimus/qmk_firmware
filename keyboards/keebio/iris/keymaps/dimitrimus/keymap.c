@@ -39,15 +39,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [1] = LAYOUT(
     //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
-       KC_TILD, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                              KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_DEL,
+       KC_TILD, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_GRV,  KC_PGUP, CD_LEFT, KC_UP,   CD_RGHT, KC__VOLUP,                        KC__VOLUP, CD_LEFT, KC_UP,   CD_RGHT, KC_PGUP, KC_RBRC,
+       KC_GRV,  KC_PGUP, CD_LEFT, KC_UP,   CD_RGHT, KC__VOLUP,                          KC_WH_D, KC_BTN1, KC_MS_U, KC_BTN2, KC_PGUP, KC_RBRC,
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_LCTL, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC__VOLDOWN,                    KC__VOLDOWN, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_BSLS,
+       KC_LCTL, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC__VOLDOWN,                        KC_WH_U, KC_MS_L, KC_MS_D, KC_MS_R, KC_PGDN, KC_BSLS,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
        KC_LSFT, SH_1,    SH_2,    SH_3,    SH_4,    SH_5,    KC_F12,           KC_MPLY, SH_6,    SH_7,    SH_8,    SH_9,    SH_0,    KC_RSFT,
     //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      KC_LGUI, KC_NO,   KC_LALT,                   KC_RALT, KC_NO,   KC_DEL
+                                      KC_LGUI, KC_NO,   KC_LALT,                   KC_RALT, KC_BTN1, KC_DEL
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     ),
 
@@ -55,13 +55,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
        KC_F12,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-       RGB_TOG, KC_PGUP, CD_LEFT, KC_UP,   CD_RGHT, KC__VOLUP,                        KC__VOLUP, CD_LEFT, KC_UP,   CD_RGHT, KC_PGUP, KC_RBRC,
+       RGB_TOG, KC_PGUP, KC_BTN2, KC_MS_U, KC_BTN1, KC_WH_D,                          KC__VOLUP, CD_LEFT, KC_UP,   CD_RGHT, KC_PGUP, KC_RBRC,
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_LCTL, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC__VOLDOWN,                    KC__VOLDOWN, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_BSLS,
+       KC_LCTL, KC_PGDN, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_U,                        KC__VOLDOWN, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_BSLS,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
        KC_LSFT, SH_1,    SH_2,    SH_3,    SH_4,    SH_5,    KC_F12,           KC_MPLY, SH_6,    SH_7,    SH_8,    SH_9,    SH_0,    KC_RSFT,
     //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      KC_LGUI, KC_NO,   KC_LALT,                   KC_RALT, KC_NO,   KC_DEL
+                                      KC_LGUI, KC_BTN1, KC_LALT,                   KC_RALT, KC_NO,   KC_DEL
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     )
 };

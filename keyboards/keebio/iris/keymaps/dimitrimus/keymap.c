@@ -1,24 +1,22 @@
 #include QMK_KEYBOARD_H
 
 // layout 0
-#define SHFT_ENT RSFT_T(KC_ENT)
-#define L1_MINS  LT(1,KC_MINS)
-#define ALT_SPC  LALT_T(KC_SPC)
-#define L2_EQL   LT(2,KC_EQL)
-#define CD_BSLS  RGUI_T(KC_BSLS)
+#define RSFT_PLS RSFT_T(KC_EQL)
+#define LSFT_MNS LSFT_T(KC_MINS)
+#define L1_ENT   LT(1,KC_ENT)
+#define L2_ENT   LT(2,KC_ENT)
 #define CTR_CPS  LCTL_T(KC_CAPS_LOCK)
+#define ALT_SPC  LALT_T(KC_SPC)
 
 // layout 1 and 2
 #define CD_LEFT  LGUI(KC_LEFT)
 #define CD_RGHT  LGUI(KC_RGHT)
 #define SH_1 LSFT(KC_1)
-#define SH_2 LSFT(KC_2)
-#define SH_3 LSFT(KC_3)
 #define SH_4 LSFT(KC_4)
+#define SH_LBRC LSFT(KC_LBRC)
+#define SH_RBRC LSFT(KC_RBRC)
 #define SH_5 LSFT(KC_5)
 #define SH_6 LSFT(KC_6)
-#define SH_7 LSFT(KC_7)
-#define SH_8 LSFT(KC_8)
 #define SH_9 LSFT(KC_9)
 #define SH_0 LSFT(KC_0)
 
@@ -31,9 +29,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
        CTR_CPS, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                               KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_F12,           KC_MPLY, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, SHFT_ENT,
+       LSFT_MNS,KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_F12,           KC_MPLY, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, RSFT_PLS,
     //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      KC_LGUI, L1_MINS, ALT_SPC,                   KC_SPC,  L2_EQL,  KC_BSPC
+                                      KC_LGUI, L1_ENT,  ALT_SPC,                   KC_SPC,  L2_ENT,  KC_BSPC
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     ),
 
@@ -45,9 +43,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
        KC_LCTL, KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, KC_VOLD,                            KC_WH_U, KC_MS_L, KC_MS_D, KC_MS_R, KC_PGDN, KC_BSLS,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_LSFT, SH_1,    SH_2,    SH_3,    SH_4,    SH_5,    KC_F12,           KC_MPLY, SH_6,    SH_7,    SH_8,    SH_9,    SH_0,    KC_RSFT,
+       LSFT_MNS,SH_1,    SH_4,    SH_LBRC, SH_RBRC, SH_5,    KC_F12,           KC_MPLY, SH_6,    KC_LBRC, KC_RBRC, SH_9,    SH_0,    RSFT_PLS,
     //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      KC_LGUI, KC_NO,   KC_LALT,                   KC_RALT, KC_BTN1, KC_DEL
+                                      KC_LGUI, KC_NO,   ALT_SPC,                   KC_SPC,  KC_BTN1, KC_DEL
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     ),
 
@@ -59,9 +57,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
        KC_LCTL, KC_PGDN, KC_MS_L, KC_MS_D, KC_MS_R, KC_WH_U,                            KC_VOLD, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, KC_BSLS,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_LSFT, SH_1,    SH_2,    SH_3,    SH_4,    SH_5,    KC_F12,           KC_MPLY, SH_6,    SH_7,    SH_8,    SH_9,    SH_0,    KC_RSFT,
+       LSFT_MNS,SH_1,    SH_4,    SH_LBRC, SH_RBRC, SH_5,    KC_F12,           KC_MPLY, SH_6,    KC_LBRC, KC_RBRC, SH_9,    SH_0,    RSFT_PLS,
     //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      KC_LGUI, KC_BTN1, KC_LALT,                   KC_RALT, KC_NO,   KC_DEL
+                                      KC_LGUI, KC_BTN1, ALT_SPC,                   KC_SPC,  KC_NO,   KC_DEL
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     )
 };

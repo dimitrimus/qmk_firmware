@@ -3,7 +3,7 @@
 // layout 0
 #define RSFT_PLS RSFT_T(KC_EQL)
 #define LSFT_MNS LSFT_T(KC_MINS)
-#define L1_ENT   LT(1,KC_ENT)
+#define L1_MINS  LT(1,KC_MINS)
 #define L2_ENT   LT(2,KC_ENT)
 #define CTR_CPS  LCTL_T(KC_CAPS_LOCK)
 #define ALT_SPC  LALT_T(KC_SPC)
@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
        LSFT_MNS,KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_F12,           KC_MPLY, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, RSFT_PLS,
     //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      KC_LGUI, L1_ENT,  ALT_SPC,                   KC_SPC,  L2_ENT,  KC_BSPC
+                                      KC_LGUI, L1_MINS, ALT_SPC,                   KC_SPC,  L2_ENT,  KC_BSPC
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     ),
 

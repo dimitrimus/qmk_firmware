@@ -35,9 +35,4 @@
 #    endif
 #endif
 
-// Lets you roll mod-tap keys
-#define IGNORE_MOD_TAP_INTERRUPT
-
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
-
-#define ENCODER_RESOLUTION 1

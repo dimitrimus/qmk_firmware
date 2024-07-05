@@ -15,8 +15,8 @@
 #define GUI_SCLN RGUI_T(KC_SCLN)
 
 // Layer switches
-#define L4_ESC LT(4, KC_ESC)
-#define L2_TAB LT(2, KC_TAB)
+#define L4_TAB LT(4, KC_TAB)
+#define L2_ESC LT(2, KC_ESC)
 #define L1_SPC LT(1, KC_SPC)
 #define L2_QUO LT(2, KC_QUOT)
 #define L3_Z   LT(3, KC_Z)
@@ -24,16 +24,16 @@
 // L2
 
 // Left-hand home row mods
-#define GUI_1 LGUI_T(KC_1)
-#define ALT_2 LALT_T(KC_2)
-#define CTL_3 LCTL_T(KC_3)
-#define SFT_4 LSFT_T(KC_4)
+#define GUI_S1 LGUI_T(KC_EXLM)
+#define ALT_S2 LALT_T(KC_AT)
+#define CTL_S3 LCTL_T(KC_HASH)
+#define SFT_S4 LSFT_T(KC_DLR)
 
 // Right-hand home row mods
-#define SFT_7 RSFT_T(KC_7)
-#define CTL_8 RCTL_T(KC_8)
-#define ALT_9 RALT_T(KC_9)
-#define GUI_0 RGUI_T(KC_0)
+#define SFT_S7 RSFT_T(KC_AMPR)
+#define CTL_S8 RCTL_T(KC_ASTR)
+#define ALT_S9 RALT_T(KC_LPRN)
+#define GUI_S0 RGUI_T(KC_RPRN)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT(
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
        _______, L3_Z,    KC_X,    KC_C,    KC_V,    KC_B,    _______,          _______, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, _______,
     //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      _______, L4_ESC,  L2_TAB,                    L1_SPC,  L2_QUO,  _______
+                                      _______, L4_TAB,  L2_ESC,                    L1_SPC,  L2_QUO,  _______
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     ),
 
@@ -58,9 +58,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
        _______, KC_LGUI, KC_LALT, KC_LCTL, KC_LSFT, _______,                            KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT,KC_ENT,  _______,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-       _______, KC_EQL,  KC_PLUS, KC_UNDS, KC_MINS, KC_PIPE, _______,          _______, KC_BSLS, KC_PGDN, KC_PGUP, KC_LBRC, KC_RBRC, _______,
+       _______, _______, _______, KC_PLUS, KC_EQL,  KC_PIPE, _______,          _______, KC_BSLS, KC_PGDN, KC_PGUP, KC_LBRC, KC_RBRC, _______,
     //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      _______, KC_ESC,  KC_TAB,                    KC_SPC,  _______, _______
+                                      _______, KC_TAB,  KC_ESC,                    KC_SPC,  KC_MINS, _______
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     ),
 
@@ -68,13 +68,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //┌────────┬────────┬────────┬────────┬────────┬────────┐                          ┌────────┬────────┬────────┬────────┬────────┬────────┐
        _______, _______, _______, _______, _______, _______,                            _______, _______, _______, _______, _______, _______,
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-       _______, S(KC_1), S(KC_2), S(KC_3), S(KC_4), S(KC_5),                            S(KC_6), S(KC_7), S(KC_8), S(KC_9), S(KC_0), _______,
+       _______, KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                               KC_6,    KC_7,    KC_8,    KC_9,    KC_0, _______,
     //├────────┼────────┼────────┼────────┼────────┼────────┤                          ├────────┼────────┼────────┼────────┼────────┼────────┤
-       _______, GUI_1,   ALT_2,   CTL_3,   SFT_4,   KC_5,                               KC_6,    SFT_7,   CTL_8,   ALT_9,   GUI_0,   _______,
+       _______, GUI_S1,  ALT_S2,  CTL_S3,  SFT_S4,  KC_PERC,                            KC_CIRC, SFT_S7,  CTL_S8,  ALT_S9,  GUI_S0,  _______,
     //├────────┼────────┼────────┼────────┼────────┼────────┼────────┐        ┌────────┼────────┼────────┼────────┼────────┼────────┼────────┤
-       _______, KC_EQL,  KC_PLUS, KC_UNDS, KC_MINS, KC_PIPE, _______,          _______, KC_BSLS, KC_LCBR, KC_RCBR, KC_LBRC, KC_RBRC, _______,
+       _______, _______, _______, KC_PLUS, KC_EQL,  KC_PIPE, _______,          _______, KC_BSLS, KC_LCBR, KC_RCBR, KC_LBRC, KC_RBRC, _______,
     //└────────┴────────┴────────┴───┬────┴───┬────┴───┬────┴───┬────┘        └───┬────┴───┬────┴───┬────┴───┬────┴────────┴────────┴────────┘
-                                      _______, KC_ESC,  KC_TAB,                    KC_SPC,  _______, _______
+                                      _______, KC_TAB,  KC_ESC,                    KC_SPC,  KC_MINS, _______
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     ),
 
@@ -106,3 +106,57 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //                               └────────┴────────┴────────┘                 └────────┴────────┴────────┘
     )
 };
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case GUI_S1:
+            if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_EXLM);
+                return false;
+            }
+            break;
+        case ALT_S2:
+            if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_AT);
+                return false;
+            }
+            break;
+        case CTL_S3:
+            if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_HASH);
+                return false;
+            }
+            break;
+        case SFT_S4:
+            if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_DLR);
+                return false;
+            }
+            break;
+        case SFT_S7:
+            if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_AMPR);
+                return false;
+            }
+            break;
+        case CTL_S8:
+            if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_ASTR);
+                return false;
+            }
+            break;
+        case ALT_S9:
+            if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_LPRN);
+                return false;
+            }
+            break;
+        case GUI_S0:
+            if (record->tap.count && record->event.pressed) {
+                tap_code16(KC_RPRN);
+                return false;
+            }
+            break;
+    }
+    return true;
+}
